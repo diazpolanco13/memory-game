@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./styles/Carta.css";
-import FlipCard from "react-flipcard";
+import FlipCard from "react-flipcard-2";
 
 export default class Carta extends Component {
   render() {
