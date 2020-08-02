@@ -6,11 +6,11 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
-    "font-awesome": "^4.7.0",
-    "lodash.shuffle": "^4.2.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "font-awesome": "4.7.0",
+    "lodash.shuffle": "4.2.0",
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "react-flipcard": "0.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -32,8 +32,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "react-flipcard-2": "^0.3.2"
   }
 }

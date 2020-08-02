@@ -9,6 +9,8 @@ const getEstadoInicial = () => {
   const baraja = construirBaraja();
   return {
     baraja,
+    parejaSeleccionada: [],
+    estaComparando: false,
   };
 };
 
@@ -22,8 +24,25 @@ export default class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Tablero baraja={this.state.baraja} />
+        <Tablero
+          baraja={this.state.baraja}
+          parejaSeleccionada={this.state.parejaSeleccionada}
+          seleccionarCarta={(carta) => this.seleccionarCarta(carta)}
+        />
       </div>
     );
+  }
+  seleccionarCarta(carta) {
+    if (
+      this.state.estaComparando ||
+      this.state.parejaSeleccionada.indexOf(carta) > -1 ||
+      carta.fueAdivinada
+    ) {
+      return;
+    }
+    const parejaSeleccionada = [...this.state.parejaSeleccionada, carta];
+    this.state({
+      parejaSeleccionada,
+    });
   }
 }
